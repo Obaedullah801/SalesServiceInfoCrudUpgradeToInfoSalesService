@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCTutorialModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MVCTutorialModelStoreContainer">
+    <EntitySet Name="tblDepartments" EntityType="MVCTutorialModel.Store.tblDepartments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblStudents" EntityType="MVCTutorialModel.Store.tblStudents" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tblStudent_tblDepartment" Association="MVCTutorialModel.Store.FK_tblStudent_tblDepartment">
+      <End Role="tblDepartment" EntitySet="tblDepartments" />
+      <End Role="tblStudent" EntitySet="tblStudents" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblDepartments">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblStudents">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" Nullable="true" />
+    <Property Name="DepartmentId" Type="int" Nullable="true" />
+  </EntityType>
+  <Association Name="FK_tblStudent_tblDepartment">
+    <End Role="tblDepartment" Type="MVCTutorialModel.Store.tblDepartments" Multiplicity="0..1" />
+    <End Role="tblStudent" Type="MVCTutorialModel.Store.tblStudents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartment">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="tblStudent">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

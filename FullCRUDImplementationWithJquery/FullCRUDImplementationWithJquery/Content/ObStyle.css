@@ -1,0 +1,188 @@
+﻿body {
+    background-color:white;
+   font-family:Tahoma;
+}
+
+#main {
+    position:relative;
+    top:-5px;
+    margin:0 auto;
+    width:1050px;
+    height:auto;
+    border:20px solid #9CAAC1;
+    
+
+}
+#header {
+   font-family:fantasy;
+    background-color:#114863;
+    width:auto;
+    height:80px;
+}
+#left_header {
+   color:White;
+    padding-left:10px;
+    float:left;
+    width:auto;
+    height:auto;
+    background-color:transparent;
+}
+
+#topmenu {
+     margin: 0 auto;
+    height: 25px;
+    background-color: #1D5A78;
+    border-bottom: 1px solid #FFFFFF;
+}
+#topmenu ul
+{
+    font-family: Tahoma;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float:right;
+}
+#topmenu ul li
+{
+    display: block;
+    position: relative;
+    float: left;
+}
+#topmenu ul li a
+{
+    display: block;
+    text-decoration: none;
+    color: #B0ECFF;
+	font-weight:900;
+	font-family:Tahoma;
+    margin-left:6px;
+    white-space: nowrap;
+	text-align:left;
+	padding-left:4px;
+	padding-right:4px;
+	height:25px;
+	line-height:25px;
+	width:auto;
+}
+#topmenu ul li a:hover
+{
+    background: #B4E2FE;
+    margin-left: 6px;
+    text-align: left;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-decoration: none;
+    height: 25px;
+    line-height: 25px;
+    width: auto;
+    color: #000;
+}
+
+#maincontent {
+    width:999px;
+    height:auto;
+    background-color:#8BB5C4;
+    /*background-color:#cdeaec;*/
+    float:left; 
+}
+#leftmenu {
+     float:left;
+    width:180px;
+    position:relative;
+    background-color:#8BB5C4;
+    min-height:500px;
+}
+#leftmenu ul
+{
+    list-style-type: none;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    text-indent: 15px;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+#leftmenu ul li
+{
+    background-color: #649DB3;
+    line-height: 28px;
+    border-bottom: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    position: relative;
+}
+
+#leftmenu ul li a
+{
+    text-decoration: none;
+    color: #00ff21;
+    display: block;
+}
+
+#leftmenu ul li a:hover
+{
+    background-color: #00ff21;
+    color: #00ff21;
+    font-weight: bold;
+}
+
+#leftmenu ul li a:active
+{
+    background-color:#00ff21;
+}
+
+#leftmenu ul ul 
+{
+    position:absolute;
+    visibility:hidden;
+}
+
+#leftmenu ul li:hover ul 
+{
+    visibility:visible;
+    top:0px;
+    left:180px;
+    z-index:30000;
+    display:inline;
+    width:180px;
+}
+
+#rightcontent
+{
+  
+    float:right;
+    width:818px;
+    min-height:600px;
+    position:relative;
+    background-color:#cdeaec;
+    left:-1px;
+    
+}
+
+#footer
+{
+    clear: both;
+    background-color: #1D5A78;
+    height: 10px;
+    color: white;
+    padding: 20px;
+    font-family: Tahoma;
+    font-size: 12px;
+}
+
+
+#info {
+    float: left;
+}
+
+.validationmsg
+    {
+    color:Maroon;
+    font-size:11px;
+    }
+.validationmsg1
+    {
+    color:blueviolet;
+    font-size:11px;
+    }

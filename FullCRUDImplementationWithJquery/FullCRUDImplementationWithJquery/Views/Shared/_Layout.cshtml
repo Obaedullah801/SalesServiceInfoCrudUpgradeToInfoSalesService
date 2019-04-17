@@ -1,0 +1,180 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="@Url.Content("~/Content/obstyle.css")" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <div id="main">
+        <div id="header">
+            <div id="left_header">
+                <h2>Majeda Store</h2>
+            </div>
+        </div>
+        <div id="topmenu">
+            <ul style="padding-right:10px;float:right"><li>Login</li></ul>
+            <ul style="padding-left:180px;float:left">
+                <li style="float:left">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li style="float:left">@Html.ActionLink("About", "About", "Home")</li>
+                <li style="float:left">@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+
+        </div>
+        <div id="maincontent">
+            <div id="leftmenu">
+                <ul>
+                    <li>
+                        @Html.ActionLink("Patient Info", "Index", "Home")
+                    <ul>
+                        @*<li>@Html.ActionLink("Add New PatientInfo", "Create", "tbl_EmployeeInfo")</li>*@
+                        <li>@Html.ActionLink("Employee Info", "Index", "tbl_EmployeeInfo")</li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    @Html.ActionLink("EduResult", "Index", "Home")
+                <ul>
+                    <li>@Html.ActionLink("Add New EduResult", "Create", "tbl_EduResult")</li>
+                    <li>@Html.ActionLink("EduResult List", "Index", "tbl_EduResult")</li>
+
+                </ul>
+            </li>
+
+            <li>
+                @Html.ActionLink("Exam", "Index", "Home")
+            <ul>
+                <li>@Html.ActionLink("Add New Exam", "Create", "tbl_Exam")</li>
+                <li>@Html.ActionLink("Exam List", "Index", "tbl_Exam")</li>
+
+            </ul>
+        </li>
+
+        <li>
+            @Html.ActionLink("Institute", "Index", "Home")
+        <ul>
+            <li>@Html.ActionLink("Add New Institute", "Create", "tbl_Institute")</li>
+            <li>@Html.ActionLink("Institute List", "Index", "tbl_Institute")</li>
+
+        </ul>
+    </li>
+
+    @*<li>
+        @Html.ActionLink("Status", "Index", "Home")
+    <ul>
+        <li>@Html.ActionLink("Add New Status", "Create", "tbl_Status")</li>
+        <li>@Html.ActionLink("Status List", "Index", "tbl_Status")</li>
+
+    </ul>
+</li>
+<li>
+    @Html.ActionLink("Bord", "Index", "Home")
+<ul>
+    <li>@Html.ActionLink("Add New Bord", "Create", "tbl_Bord")</li>
+    <li>@Html.ActionLink("Bord List", "Index", "tbl_Bord")</li>
+</ul>
+</li>
+<li>
+    @Html.ActionLink("City", "Index", "Home")
+<ul>
+    <li>@Html.ActionLink("Add New City", "Create", "tbl_City")</li>
+    <li>@Html.ActionLink("City List", "Index", "tbl_City")</li>
+
+</ul>
+</li>
+<li>
+    @Html.ActionLink("Country", "Index", "Home")
+<ul>
+    <li>@Html.ActionLink("Add New Country", "Create", "tbl_Country")</li>
+    <li>@Html.ActionLink("Country List", "Index", "tbl_Country")</li>
+
+</ul>
+</li>*@
+</ul>
+</div>
+<div id="rightcontent">
+    <section>@RenderBody()</section>
+</div>
+</div>
+<div id="footer">
+    Designed & Developed by <a href=http://www.linktechbd.com/ style=" text-decoration:none">BD Software Technology</a>
+</div>
+</div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>*@
